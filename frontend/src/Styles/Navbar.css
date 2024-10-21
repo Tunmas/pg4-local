@@ -1,0 +1,48 @@
+/* Navbar.css */
+.custom-navbar {
+  background-color: #101a41; /* Fondo negro */
+  color: white; /* Texto blanco */
+  position: relative; /* Necesario para posicionar elementos absolutos */
+  display: flex; /* Flexbox para alinear íconos y contenido */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Distribuye el espacio entre los íconos y el contenido */
+  padding: 10px 20px; /* Espaciado */
+  height: 7vh; /* Ajusta la altura de la navbar */
+  border-bottom: 2px solid black; /* Cambia el grosor y color según sea necesario */
+}
+
+/* Spinner amarillo personalizado */
+.custom-spinner {
+  color: #FCEE4A; /* Color amarillo del spinner */
+}
+
+/* Centra la imagen del título con respecto a toda la navbar */
+.navbar-title-container {
+  position: absolute; /* Asegúrate de que esto esté absoluto */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Ajusta el centrado para que no se desplace */
+  display: flex; /* Flexbox para centrar su contenido si es necesario */
+  justify-content: center; /* Asegura que el contenido esté centrado */
+  align-items: center; /* Alinea verticalmente el contenido */
+}
+
+.navbar-title {
+    font-size: 1.5rem; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold; /* Opcional: para hacer el texto más destacado */
+  }
+
+/* Ajuste del ícono a la izquierda de la navbar */
+.icon {
+  width: 50px; /* Tamaño del ícono */
+  height: auto; /* Mantiene proporción */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); /* Sombra blanca */
+}
+
+  
+
+/* Alineación del contenido a la derecha */
+.navbar-right {
+  display: flex;
+  justify-content: flex-end; /* Alinea el contenido a la derecha */
+  align-items: center; /* Centra verticalmente */
+}

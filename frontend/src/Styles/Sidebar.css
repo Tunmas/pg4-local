@@ -1,0 +1,35 @@
+/* src/Components/Sidebar.css */
+.sidebar {
+    width: 250px; /* Ancho del menú */
+    background-color: #f8f9fa; /* Color de fondo */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    position: fixed; /* Fijo en la parte izquierda */
+    top: 7vh; /* Separar del navbar */
+    left: 0;
+    height: 100%; /* Ocupa el 80% de la altura */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es mayor que la altura */
+}
+
+.sidebar h2 {
+    font-size: 1.5rem; /* Tamaño del título */
+    color: #343a40; /* Color del texto */
+}
+
+.sidebar ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+}
+
+.sidebar ul li {
+    margin: 10px 0; /* Espacio entre los elementos */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: #007bff; /* Color del texto */
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline; /* Subrayar al pasar el mouse */
+}

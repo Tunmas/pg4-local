@@ -1,0 +1,50 @@
+/* src/App.css */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif; /* Cambia la fuente por defecto para mejorar la legibilidad */
+}
+
+.app-container {
+  display: flex; /* Usamos flexbox para el layout */
+  min-height: calc(100vh - 60px); /* Ajusta para que no se superponga al navbar */
+  margin-top: 60px; /* Ajusta según la altura de tu navbar */
+}
+
+.sidebar {
+  width: 250px; /* Ancho fijo para el sidebar */
+  background-color: #f8f9fa; /* Color de fondo del sidebar */
+  padding: 20px; /* Espacio interno */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para el sidebar */
+  border-right: 2px solid #dee2e6; /* Borde derecho para separación */
+}
+
+.content-with-sidebar {
+  flex-grow: 1; /* Toma el resto del espacio disponible */
+  padding: 20px; /* Espacio interno */
+  background-color: #ffffff; /* Color de fondo del contenido */
+}
+
+.content-full {
+  flex-grow: 1; /* Toma el resto del espacio disponible sin sidebar */
+  padding: 20px; /* Espacio interno */
+  background-color: #ffffff; /* Color de fondo del contenido */
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  background-color: #f8f9fa; /* Color de fondo para la pantalla de carga */
+}
+.content-container {
+  border: 1px solid #ced4da; /* Borde del recuadro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #ffffff; /* Color de fondo del recuadro */
+  padding: 2vh; /* Espacio interno */
+  height: 75vh; /* Se ajusta al contenido */
+  width: 85%; /* Ancho del 80% */
+  margin-left: 28vh; /* Alineado a la derecha */
+  margin-right: auto; /* Centrado horizontalmente */
+}

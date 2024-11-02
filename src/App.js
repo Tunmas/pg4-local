@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import Navbar from './Components/Navbar';
@@ -10,7 +10,21 @@ import EditarCliente from './Components/EditarCliente';
 import './App.css';
 
 function App() {
-  const { isAuthenticated } = useAuth0(); 
+  const { isAuthenticated, getIdTokenClaims } = useAuth0(); 
+
+  useEffect(() => {
+    const fetchIdToken = async () => {
+      if (isAuthenticated) {
+        try {
+          const claims = await getIdTokenClaims();
+          console.log("ID Token:", claims.__raw); // Imprimir el idToken en la consola
+        } catch (error) {
+          console.error("Error obteniendo idTokenClaims:", error);
+        }
+      }
+    };
+    fetchIdToken();
+  }, [isAuthenticated, getIdTokenClaims]);
 
   return (
     <Router>

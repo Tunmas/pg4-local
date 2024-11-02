@@ -20,7 +20,8 @@ const EditarCliente = () => {
 
   const fetchCliente = async () => {
     try {
-      const response = await axios.get(`https://prog3-final-backend.vercel.app/api/usuarios/${id}`);
+      // const response = await axios.get(`https://prog3-final-backend.vercel.app/api/usuarios/${id}`);
+      const response = await axios.get(`http://localhost:3000/api/usuarios/${id}`);
       setCliente(response.data);
       setLoading(false);
     } catch (error) {
@@ -36,7 +37,8 @@ const EditarCliente = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`https://prog3-final-backend.vercel.app/api/usuarios/${id}`, cliente);
+      // await axios.put(`https://prog3-final-backend.vercel.app/api/usuarios/${id}`, cliente);
+      await axios.put(`http://localhost:3000/api/usuarios/${id}`, cliente);
       navigate('/clientes'); // Redirige de vuelta a la lista de clientes
     } catch (error) {
       console.error('Error updating cliente', error);

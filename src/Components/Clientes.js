@@ -18,7 +18,8 @@ const Clientes = () => {
   const fetchClientes = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('https://prog3-final-backend.vercel.app/api/usuarios', {
+      // const response = await axios.get('https://prog3-final-backend.vercel.app/api/usuarios', {
+      const response = await axios.get('http://localhost:3000/api/usuarios', {
         params: { page: pageIndex + 1, pageSize }, // Incrementa pageIndex para que sea 1-indexed
       });
       setClientes(response.data.usuarios || []);
@@ -87,7 +88,8 @@ const Clientes = () => {
 
   const toggleEstado = async (id, estadoActual) => {
     try {
-      await axios.patch(`https://prog3-final-backend.vercel.app/api/usuarios/${id}/estado`, { activo: !estadoActual });
+      // await axios.patch(`https://prog3-final-backend.vercel.app/api/usuarios/${id}/estado`, { activo: !estadoActual });
+      await axios.patch(`http://localhost:3000/api/usuarios/${id}/estado`, { activo: !estadoActual });
       setClientes((prevClientes) =>
         prevClientes.map(cliente =>
           cliente._id === id ? { ...cliente, activo: !estadoActual } : cliente

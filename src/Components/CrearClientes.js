@@ -15,7 +15,8 @@ const CrearCliente = () => {
     const nuevoCliente = { nombre, email, telefono, direccion, activo };
 
     try {
-      const response = await axios.post('https://prog3-final-backend.vercel.app/api/usuarios', nuevoCliente);
+      // const response = await axios.post('https://prog3-final-backend.vercel.app/api/usuarios', nuevoCliente);
+      const response = await axios.post('http://localhost:3000/api/usuarios', nuevoCliente);
       console.log('Cliente creado:', response.data);
       setMensaje(`Cliente "${nombre}" creado con éxito.`); // Mensaje personalizado
       // Reiniciar el formulario
